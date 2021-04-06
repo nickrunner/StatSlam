@@ -1,0 +1,187 @@
+
+
+
+,TOV%_Def
+Rank,Name,Val,Normalized,Weight,Enabled
+1,Auburn,1.0,22.0,0.5,true
+2,Abilene Christian,0.97,21.7,0.5,true
+3,Prairie View,0.97,21.7,0.5,true
+4,Florida International,0.93,21.3,0.5,true
+5,Texas-Rio Grande Valley,0.93,21.3,0.5,true
+6,New Orleans,0.8899999999999999,20.9,0.5,true
+7,North Carolina-Greensboro,0.8899999999999999,20.9,0.5,true
+8,Maryland-Baltimore County,0.8699999999999999,20.7,0.5,true
+9,Manhattan,0.8600000000000001,20.6,0.5,true
+10,Morgan State,0.85,20.5,0.5,true
+11,Washington,0.85,20.5,0.5,true
+12,Charleston Southern,0.8399999999999999,20.4,0.5,true
+13,Kansas State,0.8300000000000001,20.3,0.5,true
+14,Rider,0.82,20.2,0.5,true
+15,Robert Morris,0.8100000000000002,20.1,0.5,true
+16,Texas Tech,0.8,20.0,0.5,true
+17,Virginia Commonwealth,0.8,20.0,0.5,true
+18,Eastern Kentucky,0.78,19.8,0.5,true
+19,Arkansas,0.7699999999999999,19.7,0.5,true
+20,Syracuse,0.7699999999999999,19.7,0.5,true
+21,Lamar,0.75,19.5,0.5,true
+22,Sacramento State,0.75,19.5,0.5,true
+23,South Florida,0.75,19.5,0.5,true
+24,Florida,0.7399999999999999,19.4,0.5,true
+25,Loyola Marymount,0.7399999999999999,19.4,0.5,true
+26,Southern,0.7399999999999999,19.4,0.5,true
+27,Stephen F. Austin,0.7300000000000001,19.3,0.5,true
+28,Missouri State,0.72,19.2,0.5,true
+29,North Carolina State,0.72,19.2,0.5,true
+30,Sam Houston State,0.72,19.2,0.5,true
+31,Texas State,0.72,19.2,0.5,true
+32,Holy Cross,0.7100000000000002,19.1,0.5,true
+33,Austin Peay,0.7,19.0,0.5,true
+34,UC-Davis,0.7,19.0,0.5,true
+35,Florida A&M,0.7,19.0,0.5,true
+36,Illinois,0.7,19.0,0.5,true
+37,Southeastern Louisiana,0.7,19.0,0.5,true
+38,Virginia Tech,0.7,19.0,0.5,true
+39,Fairfield,0.6899999999999998,18.9,0.5,true
+40,Norfolk State,0.6899999999999998,18.9,0.5,true
+41,Alabama State,0.68,18.8,0.5,true
+42,Lipscomb,0.68,18.8,0.5,true
+43,Brown,0.6699999999999999,18.7,0.5,true
+44,Loyola (IL),0.6699999999999999,18.7,0.5,true
+45,East Tennessee State,0.65,18.5,0.5,true
+46,Liberty,0.65,18.5,0.5,true
+47,Monmouth,0.65,18.5,0.5,true
+48,Houston Baptist,0.6399999999999999,18.4,0.5,true
+49,Marshall,0.6399999999999999,18.4,0.5,true
+50,Memphis,0.6399999999999999,18.4,0.5,true
+51,Pepperdine,0.6399999999999999,18.4,0.5,true
+52,Wright State,0.6399999999999999,18.4,0.5,true
+53,Alabama A&M,0.6300000000000001,18.3,0.5,true
+54,Duquesne,0.6300000000000001,18.3,0.5,true
+55,Georgia Southern,0.6300000000000001,18.3,0.5,true
+56,Jackson State,0.6300000000000001,18.3,0.5,true
+57,Jacksonville State,0.6300000000000001,18.3,0.5,true
+58,Missouri-Kansas City,0.6300000000000001,18.3,0.5,true
+59,Oregon,0.6300000000000001,18.3,0.5,true
+60,Portland State,0.6300000000000001,18.3,0.5,true
+61,South Carolina State,0.6300000000000001,18.3,0.5,true
+62,St. John's (NY),0.6300000000000001,18.3,0.5,true
+63,Tennessee State,0.6300000000000001,18.3,0.5,true
+64,Buffalo,0.6199999999999999,18.2,0.5,true
+65,Cal State Bakersfield,0.6199999999999999,18.2,0.5,true
+66,Cincinnati,0.6199999999999999,18.2,0.5,true
+67,Loyola (MD),0.6199999999999999,18.2,0.5,true
+68,Mississippi,0.6199999999999999,18.2,0.5,true
+69,Wofford,0.6199999999999999,18.2,0.5,true
+70,Fairleigh Dickinson,0.6100000000000001,18.1,0.5,true
+71,Temple,0.6100000000000001,18.1,0.5,true
+72,Texas A&M-Corpus Christi,0.6100000000000001,18.1,0.5,true
+73,Arizona,0.6,18.0,0.5,true
+74,Florida State,0.6,18.0,0.5,true
+75,Furman,0.6,18.0,0.5,true
+76,Georgia State,0.6,18.0,0.5,true
+77,Louisiana State,0.6,18.0,0.5,true
+78,Pittsburgh,0.6,18.0,0.5,true
+79,South Carolina,0.6,18.0,0.5,true
+80,University of California,0.5899999999999999,17.9,0.5,true
+81,Canisius,0.5899999999999999,17.9,0.5,true
+82,North Texas,0.5800000000000001,17.8,0.5,true
+83,Pacific,0.5800000000000001,17.8,0.5,true
+84,Vermont,0.5800000000000001,17.8,0.5,true
+85,Campbell,0.57,17.7,0.5,true
+86,Mercer,0.57,17.7,0.5,true
+87,Providence,0.57,17.7,0.5,true
+88,Rhode Island,0.57,17.7,0.5,true
+89,Arkansas-Pine Bluff,0.5600000000000002,17.6,0.5,true
+90,Bethune-Cookman,0.5600000000000002,17.6,0.5,true
+91,Clemson,0.5600000000000002,17.6,0.5,true
+92,Eastern Michigan,0.5600000000000002,17.6,0.5,true
+93,New Mexico State,0.5600000000000002,17.6,0.5,true
+94,North Carolina A&T,0.5600000000000002,17.6,0.5,true
+95,Connecticut,0.55,17.5,0.5,true
+96,Grand Canyon,0.55,17.5,0.5,true
+97,Green Bay,0.55,17.5,0.5,true
+98,Louisiana,0.55,17.5,0.5,true
+99,Maine,0.55,17.5,0.5,true
+100,Montana,0.55,17.5,0.5,true
+101,Texas Southern,0.55,17.5,0.5,true
+102,Wagner,0.55,17.5,0.5,true
+103,Columbia,0.5399999999999998,17.4,0.5,true
+104,Fresno State,0.5399999999999998,17.4,0.5,true
+105,Incarnate Word,0.5399999999999998,17.4,0.5,true
+106,IUPUI,0.5399999999999998,17.4,0.5,true
+107,La Salle,0.5399999999999998,17.4,0.5,true
+108,Penn State,0.5399999999999998,17.4,0.5,true
+109,Seton Hall,0.5399999999999998,17.4,0.5,true
+110,Howard,0.53,17.3,0.5,true
+111,Indiana State,0.53,17.3,0.5,true
+112,Miami (FL),0.53,17.3,0.5,true
+113,North Carolina Central,0.53,17.3,0.5,true
+114,Army,0.5199999999999999,17.2,0.5,true
+115,Delaware State,0.5199999999999999,17.2,0.5,true
+116,Kent State,0.5199999999999999,17.2,0.5,true
+117,Murray State,0.5199999999999999,17.2,0.5,true
+118,Purdue,0.5199999999999999,17.2,0.5,true
+119,Saint Louis,0.5199999999999999,17.2,0.5,true
+120,South Alabama,0.5199999999999999,17.2,0.5,true
+121,St. Bonaventure,0.5199999999999999,17.2,0.5,true
+122,Little Rock,0.5100000000000001,17.1,0.5,true
+123,Duke,0.5100000000000001,17.1,0.5,true
+124,Fordham,0.5100000000000001,17.1,0.5,true
+125,Marist,0.5100000000000001,17.1,0.5,true
+126,Mississippi State,0.5100000000000001,17.1,0.5,true
+127,Nevada,0.5100000000000001,17.1,0.5,true
+128,Northwestern State,0.5100000000000001,17.1,0.5,true
+129,SIU Edwardsville,0.5100000000000001,17.1,0.5,true
+130,Southern Mississippi,0.5100000000000001,17.1,0.5,true
+131,St. Francis (NY),0.5100000000000001,17.1,0.5,true
+132,Butler,0.5,17.0,0.5,true
+133,Florida Gulf Coast,0.5,17.0,0.5,true
+134,Hartford,0.5,17.0,0.5,true
+135,Louisiana Tech,0.5,17.0,0.5,true
+136,Presbyterian,0.5,17.0,0.5,true
+137,Tennessee Tech,0.5,17.0,0.5,true
+138,Alcorn State,0.4899999999999999,16.9,0.5,true
+139,College of Charleston,0.4899999999999999,16.9,0.5,true
+140,Creighton,0.4899999999999999,16.9,0.5,true
+141,East Carolina,0.4899999999999999,16.9,0.5,true
+142,Boise State,0.4800000000000001,16.8,0.5,true
+143,Detroit Mercy,0.4800000000000001,16.8,0.5,true
+144,Nebraska,0.4800000000000001,16.8,0.5,true
+145,Northern Kentucky,0.4800000000000001,16.8,0.5,true
+146,Pennsylvania,0.4800000000000001,16.8,0.5,true
+147,Tennessee-Martin,0.4800000000000001,16.8,0.5,true
+148,Arizona State,0.4699999999999999,16.7,0.5,true
+149,Long Beach State,0.4699999999999999,16.7,0.5,true
+150,South Carolina Upstate,0.4699999999999999,16.7,0.5,true
+151,Texas-El Paso,0.4699999999999999,16.7,0.5,true
+152,Valparaiso,0.4699999999999999,16.7,0.5,true
+153,Akron,0.46000000000000013,16.6,0.5,true
+154,Central Michigan,0.46000000000000013,16.6,0.5,true
+155,Florida Atlantic,0.46000000000000013,16.6,0.5,true
+156,Maryland-Eastern Shore,0.46000000000000013,16.6,0.5,true
+157,Northern Iowa,0.46000000000000013,16.6,0.5,true
+158,Saint Peter's,0.46000000000000013,16.6,0.5,true
+159,San Diego State,0.46000000000000013,16.6,0.5,true
+160,Stony Brook,0.46000000000000013,16.6,0.5,true
+161,Texas,0.46000000000000013,16.6,0.5,true
+162,Albany (NY),0.45,16.5,0.5,true
+163,Bradley,0.45,16.5,0.5,true
+164,Coastal Carolina,0.45,16.5,0.5,true
+165,Gonzaga,0.45,16.5,0.5,true
+166,North Carolina,0.45,16.5,0.5,true
+167,Southern Illinois,0.45,16.5,0.5,true
+168,Boston University,0.43999999999999984,16.4,0.5,true
+169,Gardner-Webb,0.43999999999999984,16.4,0.5,true
+170,Longwood,0.43999999999999984,16.4,0.5,true
+171,Nicholls State,0.43999999999999984,16.4,0.5,true
+172,Northern Colorado,0.43999999999999984,16.4,0.5,true
+173,Northern Illinois,0.43999999999999984,16.4,0.5,true
+174,Texas Christian,0.43999999999999984,16.4,0.5,true
+175,West Virginia,0.43999999999999984,16.4,0.5,true
+176,Jacksonville,0.43000000000000005,16.3,0.5,true
+177,Ohio State,0.43000000000000005,16.3,0.5,true
+178,Ohio,0.43000000000000005,16.3,0.5,true
+179,Old Dominion,0.43000000000000005,16.3,0.5,true
+180,Radford,0.43000000000000005,16.3,0.5,true
+181,Richmond,0.43000000000000005,16.3,0.5,true
+182,Savannah State,0.43000000000000005,16.3,0
