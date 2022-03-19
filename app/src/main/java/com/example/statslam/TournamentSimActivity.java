@@ -14,6 +14,8 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import dev.firstseed.sports_reference.Game;
 import dev.firstseed.sports_reference.SportsReference;
 import dev.firstseed.sports_reference.StatModel;
@@ -41,7 +43,7 @@ public class TournamentSimActivity extends AppCompatActivity
         setContentView(R.layout.activity_tournament_sim);
 
 
-        int year = getIntent().getIntExtra("year", 2021);
+        int year = getIntent().getIntExtra("year", 2022);
         season = SportsReference.cbb().getSeason(year);
         modelSpinner = findViewById(R.id.tournamentModelSpinner);
     }
@@ -66,9 +68,39 @@ public class TournamentSimActivity extends AppCompatActivity
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 try
                 {
-                    StatModel model = Assets.getModel(activity, (String)modelSpinner.getSelectedItem());
-                    season.calculateComposites(model);
-                    showTournament(season.getPredictedBracket(model));
+                    String selectedItem = (String) (modelSpinner.getSelectedItem());
+                    if(selectedItem.equals("All")){
+                        ArrayList<String> modelList = Assets.getModelList(activity);
+                        ArrayList<StatModel> models = new ArrayList();
+                        for(String modelName : modelList){
+                            if(modelName.equals("All")){
+                                continue;
+                            }
+                            System.out.println("Getting model "+modelName);
+                            models.add(Assets.getModel(activity, modelName));
+                        }
+                        Thread t = new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                NcaaBracket bracket = season.getPredictedBracket(models);
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        showTournament(bracket);
+                                    }
+                                });
+
+                            }
+                        });
+                        //t.start();
+
+                    }
+                    else{
+                        StatModel model = Assets.getModel(activity, selectedItem);
+                        season.calculateComposites(model);
+                        showTournament(season.getPredictedBracket(model));
+                    }
+
                 }
                 catch (Exception e)
                 {

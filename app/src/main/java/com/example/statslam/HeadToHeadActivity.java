@@ -48,7 +48,7 @@ public class HeadToHeadActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_head_to_head);
 
-        int year = getIntent().getIntExtra("year", 2021);
+        int year = getIntent().getIntExtra("year", 2022);
 
 
         cancelSim = false;
@@ -78,6 +78,7 @@ public class HeadToHeadActivity extends AppCompatActivity
                     final AbstractTeam team2 = season.getTeam((String) team2Spinner.getSelectedItem());
                     final Game game = new Game(team1, team2);
                     String selectedItem = (String) (modelSpinner.getSelectedItem());
+                    final DecimalFormat df = new DecimalFormat("##.##");
                     if (selectedItem.equals("All"))
                     {
                         Thread t = new Thread(new Runnable() {
@@ -87,6 +88,8 @@ public class HeadToHeadActivity extends AppCompatActivity
                                 int t2Count = 0;
                                 int t1Score = 0;
                                 int t2Score = 0;
+                                int t1LineTotal = 0;
+                                int t2LineTotal = 0;
                                 int total = 0;
                                 final int size = Assets.getModelList(activity).size();
                                 for(String modelName : Assets.getModelList(activity))
@@ -107,6 +110,8 @@ public class HeadToHeadActivity extends AppCompatActivity
                                         total++;
                                         t1Score += game.team1pts;
                                         t2Score += game.team2pts;
+                                        t1LineTotal += game.team1Line;
+                                        t2LineTotal += game.team2Line;
                                         if(game.winner.name.equals(team1.name))
                                         {
                                             t1Count++;
@@ -117,18 +122,22 @@ public class HeadToHeadActivity extends AppCompatActivity
                                         }
                                         int t1Pts = (int)Math.round( (double)t1Score/(double)total);
                                         int t2Pts = (int)Math.round((double)t2Score/(double)total);
+                                        int t1Line = (int)Math.round((double)t1LineTotal/(double)total);
+                                        int t2Line = (int)Math.round((double)t2LineTotal/(double)total);
                                         final double confidence = t1Count > t2Count ? (double)t1Count/(double)total : (double)t2Count/(double)total;
                                         final String winner = t1Count > t2Count ? team1.name: team2.name;
                                         final String loser = t1Count > t2Count ? team2.name : team1.name;
                                         final int winnerPts = t1Count > t2Count ? t1Pts : t2Pts;
                                         final int loserPts = t1Count > t2Count ? t2Pts : t1Pts;
-                                        final DecimalFormat df = new DecimalFormat("##.##");
+                                        final int winnerLine = t1Count > t2Count ? t1Line : t2Line;
+                                        final int loserLine = t1Count > t2Count ? t2Line : t1Line;
+
                                         final int tt = total;
 
                                         runOnUiThread(new Runnable() {
                                             @Override
                                             public void run() {
-                                                scoreTv.setText(winner+" "+winnerPts+"\n"+loser+" "+loserPts);
+                                                scoreTv.setText("-"+winnerLine+"  "+winner+" "+winnerPts+"\n+"+loserLine+"  "+loser+" "+loserPts);
                                                 confidenceTv.setText("Confidence: "+df.format(confidence*100)+"%"+" \nSimulations ran: "+tt+"/"+(size-1));
                                             }
                                         });
@@ -150,17 +159,11 @@ public class HeadToHeadActivity extends AppCompatActivity
                         StatModel model = Assets.getModel(activity, selectedItem);
                         season.calculateComposites(model);
 
-
-
                         game.predictOutcome(model);
-                        DecimalFormat df = new DecimalFormat("##.##");
-                        double confidence = game.confidence + 50;
-                        if(confidence > 100)
-                        {
-                            confidence = 100.0;
-                        }
-                        scoreTv.setText(game.winner.name+" "+game.winnerPts+"\n"+game.loser.name+" "+game.loserPts);
-                        confidenceTv.setText("Confidence: "+df.format(confidence)+"%");
+
+                        scoreTv.setText("-"+game.winnerLine+"  "+game.winner.name+" "+game.winnerPts+"\n+"+game.loserLine+"  "+game.loser.name+" "+game.loserPts);
+                        confidenceTv.setText("Confidence: "+df.format(game.confidence+"%"));
+                        //confidenceTv.setText("Confidence: "+(Math.round(50+game.confidence))+"/"+(Math.round(50-game.confidence)));
                     }
 
 

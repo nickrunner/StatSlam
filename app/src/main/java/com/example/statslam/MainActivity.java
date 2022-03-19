@@ -44,7 +44,10 @@ public class MainActivity extends AppCompatActivity
     private Spinner modelSpinner;
 
     private CBB cbb;
-    int selectedYear = 2021;
+    private final int MIN_YEAR = 2010;
+    private final int MAX_YEAR = 2022;
+
+    int selectedYear = MAX_YEAR;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -82,6 +85,12 @@ public class MainActivity extends AppCompatActivity
         });
         disableButton(tournamentSimButton);
 
+        try{
+            Assets.copyTournamentToCache(this);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
 
         SportsReference.cbb(DirectoryManager.CACHE_DIR(this));
         cbb = SportsReference.cbb();
@@ -89,7 +98,7 @@ public class MainActivity extends AppCompatActivity
         Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
-                cbb.getSeason(2021);
+                cbb.getSeason(MAX_YEAR);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -103,7 +112,7 @@ public class MainActivity extends AppCompatActivity
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        modelSpinner.setSelection(Assets.getModelList(activity).indexOf("2010_2019_1580"));
+                                        modelSpinner.setSelection(Assets.getModelList(activity).indexOf("2016_2021_2_1528"));
                                     }
                                 });
 
@@ -143,7 +152,7 @@ public class MainActivity extends AppCompatActivity
         {
             String model = getIntent().getStringExtra("model");
             modelSpinner.setSelection(Assets.getModelList(this).indexOf(model));
-            seasonSpinner.setSelection(getIntent().getIntExtra("year", 2021) - 2010);
+            seasonSpinner.setSelection(getIntent().getIntExtra("year", MAX_YEAR) - MIN_YEAR);
         }
         catch(Exception e)
         {
@@ -158,8 +167,8 @@ public class MainActivity extends AppCompatActivity
 
         final ArrayList<String> seasons = new ArrayList<>();
         int index=0;
-        int selectedPos = 11;
-        for(int i=2010; i<=2021; i++)
+        int selectedPos = 12;
+        for(int i=MIN_YEAR; i<=MAX_YEAR; i++)
         {
             seasons.add(Integer.toString(i));
         }

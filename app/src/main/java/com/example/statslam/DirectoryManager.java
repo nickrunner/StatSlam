@@ -2,6 +2,7 @@ package com.example.statslam;
 
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.content.res.AssetFileDescriptor;
 import android.os.Environment;
 import android.util.Log;
 
@@ -139,6 +140,23 @@ public class DirectoryManager
         OutputStream os = null;
         try {
             is = new FileInputStream(source);
+            os = new FileOutputStream(dest);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = is.read(buffer)) > 0) {
+                os.write(buffer, 0, length);
+            }
+        } finally {
+            is.close();
+            os.close();
+        }
+    }
+
+    public static void copyAssetUsingStream(InputStream source, File dest) throws IOException {
+        InputStream is = null;
+        OutputStream os = null;
+        try {
+            is = source;
             os = new FileOutputStream(dest);
             byte[] buffer = new byte[1024];
             int length;

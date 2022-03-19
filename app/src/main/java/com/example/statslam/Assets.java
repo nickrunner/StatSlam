@@ -4,6 +4,7 @@ import android.content.Context;
 
 import org.apache.commons.io.IOUtils;
 
+import java.io.File;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
@@ -16,6 +17,8 @@ public class Assets
 {
 
     final private static HashMap<String, StatModel> modelMap = new HashMap<>();
+
+
 
     public static ArrayList<String> getModelList(Context context)
     {
@@ -37,6 +40,12 @@ public class Assets
             e.printStackTrace();
         }
         return models;
+    }
+
+    public static void copyTournamentToCache(Context context)throws Exception
+    {
+        File f = new File(DirectoryManager.CACHE_DIR(context).getAbsolutePath()+"/cbb/postseason/2022-ncaa.html");
+        DirectoryManager.copyAssetUsingStream(context.getAssets().open("2022-ncaa.html"), f);
     }
 
     public static StatModel getModel(Context context, String name) throws Exception
